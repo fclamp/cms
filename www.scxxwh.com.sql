@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50147
 File Encoding         : 65001
 
-Date: 2013-11-22 15:16:20
+Date: 2013-11-22 17:56:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -157,7 +157,7 @@ CREATE TABLE `cms_admin` (
 -- Records of cms_admin
 -- ----------------------------
 INSERT INTO `cms_admin` VALUES ('1', 'admincms', 'e10adc3949ba59abbe56e057f20f883e', '', '1357372162', '1385084885', '192.168.2.15', '1', '1');
-INSERT INTO `cms_admin` VALUES ('2', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '', '1384760595', '1384762654', '192.168.2.15', '1', '1');
+INSERT INTO `cms_admin` VALUES ('2', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '', '1384760595', '1385106259', '192.168.2.16', '1', '1');
 
 -- ----------------------------
 -- Table structure for `cms_article`
@@ -762,11 +762,12 @@ CREATE TABLE `cms_logs` (
   PRIMARY KEY (`id`),
   KEY `u` (`uname`) USING BTREE,
   KEY `t` (`add_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cms_logs
 -- ----------------------------
+INSERT INTO `cms_logs` VALUES ('1', '2', 'admin', '1385106259', '192.168.2.16', '成功登录后台！');
 
 -- ----------------------------
 -- Table structure for `cms_node`
