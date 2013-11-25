@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50147
 File Encoding         : 65001
 
-Date: 2013-11-25 13:39:45
+Date: 2013-11-25 16:57:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `cms_access` (
   PRIMARY KEY (`id`),
   KEY `role_id` (`role_id`) USING BTREE,
   KEY `node_id` (`node_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4489 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4541 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cms_access
@@ -89,57 +89,58 @@ INSERT INTO `cms_access` VALUES ('2', '288', '3295');
 INSERT INTO `cms_access` VALUES ('2', '290', '3296');
 INSERT INTO `cms_access` VALUES ('2', '296', '3297');
 INSERT INTO `cms_access` VALUES ('2', '297', '3298');
-INSERT INTO `cms_access` VALUES ('1', '6', '4438');
-INSERT INTO `cms_access` VALUES ('1', '7', '4439');
-INSERT INTO `cms_access` VALUES ('1', '8', '4440');
-INSERT INTO `cms_access` VALUES ('1', '9', '4441');
-INSERT INTO `cms_access` VALUES ('1', '10', '4442');
-INSERT INTO `cms_access` VALUES ('1', '11', '4443');
-INSERT INTO `cms_access` VALUES ('1', '298', '4444');
-INSERT INTO `cms_access` VALUES ('1', '12', '4445');
-INSERT INTO `cms_access` VALUES ('1', '13', '4446');
-INSERT INTO `cms_access` VALUES ('1', '14', '4447');
-INSERT INTO `cms_access` VALUES ('1', '15', '4448');
-INSERT INTO `cms_access` VALUES ('1', '16', '4449');
-INSERT INTO `cms_access` VALUES ('1', '270', '4450');
-INSERT INTO `cms_access` VALUES ('1', '50', '4451');
-INSERT INTO `cms_access` VALUES ('1', '51', '4452');
-INSERT INTO `cms_access` VALUES ('1', '317', '4453');
-INSERT INTO `cms_access` VALUES ('1', '177', '4454');
-INSERT INTO `cms_access` VALUES ('1', '178', '4455');
-INSERT INTO `cms_access` VALUES ('1', '316', '4456');
-INSERT INTO `cms_access` VALUES ('1', '212', '4457');
-INSERT INTO `cms_access` VALUES ('1', '213', '4458');
-INSERT INTO `cms_access` VALUES ('1', '271', '4459');
-INSERT INTO `cms_access` VALUES ('1', '284', '4460');
-INSERT INTO `cms_access` VALUES ('1', '274', '4461');
-INSERT INTO `cms_access` VALUES ('1', '275', '4462');
-INSERT INTO `cms_access` VALUES ('1', '276', '4463');
-INSERT INTO `cms_access` VALUES ('1', '277', '4464');
-INSERT INTO `cms_access` VALUES ('1', '278', '4465');
-INSERT INTO `cms_access` VALUES ('1', '285', '4466');
-INSERT INTO `cms_access` VALUES ('1', '286', '4467');
-INSERT INTO `cms_access` VALUES ('1', '287', '4468');
-INSERT INTO `cms_access` VALUES ('1', '288', '4469');
-INSERT INTO `cms_access` VALUES ('1', '290', '4470');
-INSERT INTO `cms_access` VALUES ('1', '299', '4471');
-INSERT INTO `cms_access` VALUES ('1', '300', '4472');
-INSERT INTO `cms_access` VALUES ('1', '301', '4473');
-INSERT INTO `cms_access` VALUES ('1', '302', '4474');
-INSERT INTO `cms_access` VALUES ('1', '303', '4475');
-INSERT INTO `cms_access` VALUES ('1', '304', '4476');
-INSERT INTO `cms_access` VALUES ('1', '305', '4477');
-INSERT INTO `cms_access` VALUES ('1', '306', '4478');
-INSERT INTO `cms_access` VALUES ('1', '307', '4479');
-INSERT INTO `cms_access` VALUES ('1', '308', '4480');
-INSERT INTO `cms_access` VALUES ('1', '309', '4481');
-INSERT INTO `cms_access` VALUES ('1', '310', '4482');
-INSERT INTO `cms_access` VALUES ('1', '311', '4483');
-INSERT INTO `cms_access` VALUES ('1', '318', '4484');
-INSERT INTO `cms_access` VALUES ('1', '312', '4485');
-INSERT INTO `cms_access` VALUES ('1', '313', '4486');
-INSERT INTO `cms_access` VALUES ('1', '314', '4487');
-INSERT INTO `cms_access` VALUES ('1', '315', '4488');
+INSERT INTO `cms_access` VALUES ('1', '6', '4489');
+INSERT INTO `cms_access` VALUES ('1', '7', '4490');
+INSERT INTO `cms_access` VALUES ('1', '8', '4491');
+INSERT INTO `cms_access` VALUES ('1', '9', '4492');
+INSERT INTO `cms_access` VALUES ('1', '10', '4493');
+INSERT INTO `cms_access` VALUES ('1', '11', '4494');
+INSERT INTO `cms_access` VALUES ('1', '298', '4495');
+INSERT INTO `cms_access` VALUES ('1', '12', '4496');
+INSERT INTO `cms_access` VALUES ('1', '13', '4497');
+INSERT INTO `cms_access` VALUES ('1', '14', '4498');
+INSERT INTO `cms_access` VALUES ('1', '15', '4499');
+INSERT INTO `cms_access` VALUES ('1', '16', '4500');
+INSERT INTO `cms_access` VALUES ('1', '270', '4501');
+INSERT INTO `cms_access` VALUES ('1', '50', '4502');
+INSERT INTO `cms_access` VALUES ('1', '51', '4503');
+INSERT INTO `cms_access` VALUES ('1', '317', '4504');
+INSERT INTO `cms_access` VALUES ('1', '177', '4505');
+INSERT INTO `cms_access` VALUES ('1', '178', '4506');
+INSERT INTO `cms_access` VALUES ('1', '316', '4507');
+INSERT INTO `cms_access` VALUES ('1', '212', '4508');
+INSERT INTO `cms_access` VALUES ('1', '213', '4509');
+INSERT INTO `cms_access` VALUES ('1', '271', '4510');
+INSERT INTO `cms_access` VALUES ('1', '284', '4511');
+INSERT INTO `cms_access` VALUES ('1', '274', '4512');
+INSERT INTO `cms_access` VALUES ('1', '275', '4513');
+INSERT INTO `cms_access` VALUES ('1', '276', '4514');
+INSERT INTO `cms_access` VALUES ('1', '277', '4515');
+INSERT INTO `cms_access` VALUES ('1', '278', '4516');
+INSERT INTO `cms_access` VALUES ('1', '285', '4517');
+INSERT INTO `cms_access` VALUES ('1', '286', '4518');
+INSERT INTO `cms_access` VALUES ('1', '287', '4519');
+INSERT INTO `cms_access` VALUES ('1', '288', '4520');
+INSERT INTO `cms_access` VALUES ('1', '290', '4521');
+INSERT INTO `cms_access` VALUES ('1', '319', '4522');
+INSERT INTO `cms_access` VALUES ('1', '299', '4523');
+INSERT INTO `cms_access` VALUES ('1', '300', '4524');
+INSERT INTO `cms_access` VALUES ('1', '301', '4525');
+INSERT INTO `cms_access` VALUES ('1', '302', '4526');
+INSERT INTO `cms_access` VALUES ('1', '303', '4527');
+INSERT INTO `cms_access` VALUES ('1', '304', '4528');
+INSERT INTO `cms_access` VALUES ('1', '305', '4529');
+INSERT INTO `cms_access` VALUES ('1', '306', '4530');
+INSERT INTO `cms_access` VALUES ('1', '307', '4531');
+INSERT INTO `cms_access` VALUES ('1', '308', '4532');
+INSERT INTO `cms_access` VALUES ('1', '309', '4533');
+INSERT INTO `cms_access` VALUES ('1', '310', '4534');
+INSERT INTO `cms_access` VALUES ('1', '311', '4535');
+INSERT INTO `cms_access` VALUES ('1', '318', '4536');
+INSERT INTO `cms_access` VALUES ('1', '312', '4537');
+INSERT INTO `cms_access` VALUES ('1', '313', '4538');
+INSERT INTO `cms_access` VALUES ('1', '314', '4539');
+INSERT INTO `cms_access` VALUES ('1', '315', '4540');
 
 -- ----------------------------
 -- Table structure for `cms_admin`
@@ -163,8 +164,8 @@ CREATE TABLE `cms_admin` (
 -- ----------------------------
 -- Records of cms_admin
 -- ----------------------------
-INSERT INTO `cms_admin` VALUES ('1', 'admincms', 'e10adc3949ba59abbe56e057f20f883e', '', '1357372162', '1385351087', '192.168.2.15', '1', '1');
-INSERT INTO `cms_admin` VALUES ('2', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '', '1384760595', '1385351169', '192.168.2.15', '1', '1');
+INSERT INTO `cms_admin` VALUES ('1', 'admincms', 'e10adc3949ba59abbe56e057f20f883e', '', '1357372162', '1385368974', '192.168.2.15', '1', '1');
+INSERT INTO `cms_admin` VALUES ('2', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '', '1384760595', '1385369159', '192.168.2.15', '1', '1');
 
 -- ----------------------------
 -- Table structure for `cms_article`
@@ -204,9 +205,7 @@ INSERT INTO `cms_article` VALUES ('26', '9', '附件图片', '', '', 'http://cc2
 INSERT INTO `cms_article` VALUES ('27', '9', 'asdfasdfasdf', '', '', '', 'asdfasdfadf', '1385024760', '0', '0', '0', '0', '1', 'admincms', '1', '', '1385024798');
 INSERT INTO `cms_article` VALUES ('28', '13', '宜宾县育才路小学获评省首批校园文化建设特色学校', '', '', '', '“不留作业”、“不举行考试”、“取消百分制”8月21日，教育部下发《小学生减负十条规定》并在之后的一周内面向社会广泛征求意见。一时间，小学生“减负”成为社会热议的话题。那么，我们不禁要骚动辅导费大师', '1385084880', '0', '0', '0', '0', '1', 'admincms', '1', '', '1385084974');
 INSERT INTO `cms_article` VALUES ('29', '10', '宜宾宜宾宜宾', '', '', '', 'fasdfsdffasdfsadf', '1385087460', '0', '0', '0', '0', '1', 'admincms', '1', '', '1385087523');
-INSERT INTO `cms_article` VALUES ('30', '10', '宜宾宜宾', '', '', 'http://www.scxxwh.com/data/upload/528eec1380caa.jpg', 'sdfsdfasdfsd', '1385087520', '0', '0', '0', '0', '1', 'admincms', '1', '', '1385087528');
 INSERT INTO `cms_article` VALUES ('31', '10', '宜宾宜宾宜宾', '', '', '', 'fsdfasdf', '1385087520', '0', '0', '0', '0', '1', 'admincms', '1', '', '1385087533');
-INSERT INTO `cms_article` VALUES ('32', '15', '新闻活动', '', '', '', '新闻活动新闻活动新闻活动新闻活动', '1385351220', '0', '0', '0', '0', '1', 'admin', '2', '', '1385351291');
 
 -- ----------------------------
 -- Table structure for `cms_article_data`
@@ -232,9 +231,7 @@ INSERT INTO `cms_article_data` VALUES ('28', '26', '<p><img src=\"http://cc2.cac
 INSERT INTO `cms_article_data` VALUES ('29', '27', 'dsfasdfsdf');
 INSERT INTO `cms_article_data` VALUES ('30', '28', '“不留作业”、“不举行考试”、“取消百分制”8月21日，教育部下发《小学生减负十条规定》并在之后的一周内面向社会广泛征求意见。一时间，小学生“减负”成为社会热议的话题。那么，我们不禁要骚动辅导费大师“不留作业”、“不举行考试”、“取消百分制”8月21日，教育部下发《小学生减负十条规定》并在之后的一周内面向社会广泛征求意见。一时间，小学生“减负”成为社会热议的话题。那么，我们不禁要骚动辅导费大师“不留作业”、“不举行考试”、“取消百分制”8月21日，教育部下发《小学生减负十条规定》并在之后的一周内面向社会广泛征求意见。一时间，小学生“减负”成为社会热议的话题。那么，我们不禁要骚动辅导费大师“不留作业”、“不举行考试”、“取消百分制”8月21日，教育部下发《小学生减负十条规定》并在之后的一周内面向社会广泛征求意见。一时间，小学生“减负”成为社会热议的话题。那么，我们不禁要骚动辅导费大师“不留作业”、“不举行考试”、“取消百分制”8月21日，教育部下发《小学生减负十条规定》并在之后的一周内面向社会广泛征求意见。一时间，小学生“减负”成为社会热议的话题。那么，我们不禁要骚动辅导费大师“不留作业”、“不举行考试”、“取消百分制”8月21日，教育部下发《小学生减负十条规定》并在之后的一周内面向社会广泛征求意见。一时间，小学生“减负”成为社会热议的话题。那么，我们不禁要骚动辅导费大师');
 INSERT INTO `cms_article_data` VALUES ('31', '29', '');
-INSERT INTO `cms_article_data` VALUES ('32', '30', '<img src=\"/data/upload/528eee1b43d04.jpg\" alt=\"\" /><img src=\"/data/upload/528eee51843b1.jpg\" alt=\"\" /><br />');
 INSERT INTO `cms_article_data` VALUES ('33', '31', 'sdfasdfsd');
-INSERT INTO `cms_article_data` VALUES ('34', '32', '新闻活动新闻活动新闻活动新闻活动新闻活动新闻活动');
 
 -- ----------------------------
 -- Table structure for `cms_category`
@@ -275,7 +272,7 @@ CREATE TABLE `cms_category_access` (
   PRIMARY KEY (`id`),
   KEY `role_id` (`role_id`) USING BTREE,
   KEY `node_id` (`node_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3137 DEFAULT CHARSET=utf8 COMMENT='栏目权限访问表';
+) ENGINE=InnoDB AUTO_INCREMENT=3144 DEFAULT CHARSET=utf8 COMMENT='栏目权限访问表';
 
 -- ----------------------------
 -- Records of cms_category_access
@@ -639,13 +636,13 @@ INSERT INTO `cms_category_access` VALUES ('2', '7', '2957', '2');
 INSERT INTO `cms_category_access` VALUES ('2', '8', '2958', '2');
 INSERT INTO `cms_category_access` VALUES ('2', '9', '2959', '2');
 INSERT INTO `cms_category_access` VALUES ('2', '10', '2960', '2');
-INSERT INTO `cms_category_access` VALUES ('1', '9', '3130', '1');
-INSERT INTO `cms_category_access` VALUES ('1', '15', '3131', '1');
-INSERT INTO `cms_category_access` VALUES ('1', '14', '3132', '1');
-INSERT INTO `cms_category_access` VALUES ('1', '10', '3133', '1');
-INSERT INTO `cms_category_access` VALUES ('1', '11', '3134', '1');
-INSERT INTO `cms_category_access` VALUES ('1', '12', '3135', '1');
-INSERT INTO `cms_category_access` VALUES ('1', '13', '3136', '1');
+INSERT INTO `cms_category_access` VALUES ('1', '9', '3137', '1');
+INSERT INTO `cms_category_access` VALUES ('1', '15', '3138', '1');
+INSERT INTO `cms_category_access` VALUES ('1', '14', '3139', '1');
+INSERT INTO `cms_category_access` VALUES ('1', '10', '3140', '1');
+INSERT INTO `cms_category_access` VALUES ('1', '11', '3141', '1');
+INSERT INTO `cms_category_access` VALUES ('1', '12', '3142', '1');
+INSERT INTO `cms_category_access` VALUES ('1', '13', '3143', '1');
 
 -- ----------------------------
 -- Table structure for `cms_find_password_log`
@@ -715,15 +712,14 @@ CREATE TABLE `cms_index_data` (
   PRIMARY KEY (`id`),
   KEY `sort` (`sort`) USING BTREE,
   KEY `catid` (`catid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='首页内容管理';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='首页内容管理';
 
 -- ----------------------------
 -- Records of cms_index_data
 -- ----------------------------
-INSERT INTO `cms_index_data` VALUES ('1', '1', '0', '红牌楼小学建校90周年', '主题班队会研讨活动', 'sfsdfs', 'http://www.scxxwh.com/data/upload/528ef122cf0a7.jpg', '会议就完善教育质量评价标准体系，研究颁布具有中国特色、世界水平的质量评价标准和质量监测体系，把提高教育质量的理念转化为能监测、可衡量、有共识的政策和制度，改进基础教育评价理论与实践进行了有意义的研究和探讨…<a href=\"#\">查看全部</a>', '0', '1', 'admincms', '1', '1385100688');
-INSERT INTO `cms_index_data` VALUES ('2', '1', '0', '四川省学校文化建设研', '四川省一级社团', 'sdfsdf', 'http://www.scxxwh.com/data/upload/528ef6ae08b89.png', '缩写为SCR）是四川省民政厅批准、四川省社科院主管的全省性教育类学术团体，四川省一级社团，是推进我省教育跨越式发展和学校特色品牌文化建设的高端学术平台团结和组织全省有志于从事学校文化建设研究的教育工作者和社会各界人士.....<a href=\"http://www.scxxwh.com/#\">查看全部</a>', '0', '1', 'admincms', '1', '1385102019');
-INSERT INTO `cms_index_data` VALUES ('3', '2', '0', '研究会介绍', '研究会介绍', 'sdfsdf', '', '<span style=\"line-height:24px;\">研究会介绍四川省学校文化建设研究会（英文译名：Sichu-an School Culture Research Society ,缩写为SCR）是四川省民政厅批准、四川省社科院主管的全省性教育类学术团体，四川省一级社团，是推进我省教育跨越式发展和学校特色品牌文化建设的高端学术平台团结和组织全省有志于从事学校文化建设研究的教育工作者和社会....<a href=\"http://adsf\" target=\"_blank\">查看全部</a></span>', '0', '1', 'admincms', '1', '1385102025');
 INSERT INTO `cms_index_data` VALUES ('4', '4', '0', '右边栏一', '右边栏一', 'sds', '', '', '0', '1', 'admincms', '1', '1385102143');
+INSERT INTO `cms_index_data` VALUES ('9', '1', '0', 'sdfdsf', 'sdfsdfsd', 'sdfsdf', 'http://www.scxxwh.com/data/upload/52930ab905160.jpg', 'fsdfsdf', '0', '1', 'admin', '2', '1385368265');
+INSERT INTO `cms_index_data` VALUES ('10', '1', '0', 'asdfasd2sdfasdf', 'asdfasdf', 'fasdfasd', 'http://www.scxxwh.com/data/upload/52930ab06d5ce.jpg', 'asdfasdfsdfsdf', '0', '1', 'admin', '2', '1385368267');
 
 -- ----------------------------
 -- Table structure for `cms_link`
@@ -769,7 +765,7 @@ CREATE TABLE `cms_logs` (
   PRIMARY KEY (`id`),
   KEY `u` (`uname`) USING BTREE,
   KEY `t` (`add_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cms_logs
@@ -786,6 +782,43 @@ INSERT INTO `cms_logs` VALUES ('9', '2', 'admin', '1385351307', '192.168.2.15', 
 INSERT INTO `cms_logs` VALUES ('10', '2', 'admin', '1385351316', '192.168.2.15', '成功修改文章：ID32');
 INSERT INTO `cms_logs` VALUES ('11', '2', 'admin', '1385356582', '192.168.2.15', '成功删除首页内容信息：ID5,6');
 INSERT INTO `cms_logs` VALUES ('12', '2', 'admin', '1385356593', '192.168.2.15', '成功删除首页内容信息：ID8,7');
+INSERT INTO `cms_logs` VALUES ('13', '2', 'admin', '1385366021', '192.168.2.15', '成功登录后台！');
+INSERT INTO `cms_logs` VALUES ('14', '2', 'admin', '1385366195', '192.168.2.15', '成功修改首页内容信息：ID1');
+INSERT INTO `cms_logs` VALUES ('15', '2', 'admin', '1385367547', '192.168.2.15', '成功修改首页内容信息：ID1');
+INSERT INTO `cms_logs` VALUES ('16', '2', 'admin', '1385367563', '192.168.2.15', '成功修改首页内容信息：ID1');
+INSERT INTO `cms_logs` VALUES ('17', '2', 'admin', '1385367874', '192.168.2.15', '成功修改首页内容信息：ID2');
+INSERT INTO `cms_logs` VALUES ('18', '2', 'admin', '1385367946', '192.168.2.15', '成功删除首页内容信息：ID2,1');
+INSERT INTO `cms_logs` VALUES ('19', '2', 'admin', '1385367963', '192.168.2.15', '成功添加首页内容：ID9');
+INSERT INTO `cms_logs` VALUES ('20', '2', 'admin', '1385367973', '192.168.2.15', '成功修改首页内容信息：ID3');
+INSERT INTO `cms_logs` VALUES ('21', '2', 'admin', '1385368004', '192.168.2.15', '成功修改首页内容信息：ID9');
+INSERT INTO `cms_logs` VALUES ('22', '2', 'admin', '1385368020', '192.168.2.15', '成功删除首页内容信息：ID3');
+INSERT INTO `cms_logs` VALUES ('23', '2', 'admin', '1385368141', '192.168.2.15', '成功修改首页内容信息：ID9');
+INSERT INTO `cms_logs` VALUES ('24', '2', 'admin', '1385368241', '192.168.2.15', '成功添加首页内容：ID10');
+INSERT INTO `cms_logs` VALUES ('25', '2', 'admin', '1385368249', '192.168.2.15', '成功修改首页内容信息：ID9');
+INSERT INTO `cms_logs` VALUES ('26', '2', 'admin', '1385368253', '192.168.2.15', '成功修改首页内容信息：ID10');
+INSERT INTO `cms_logs` VALUES ('27', '2', 'admin', '1385368256', '192.168.2.15', '成功修改首页内容信息：ID9');
+INSERT INTO `cms_logs` VALUES ('28', '2', 'admin', '1385368265', '192.168.2.15', '成功修改首页内容信息：ID9');
+INSERT INTO `cms_logs` VALUES ('29', '2', 'admin', '1385368267', '192.168.2.15', '成功修改首页内容信息：ID10');
+INSERT INTO `cms_logs` VALUES ('30', '2', 'admin', '1385368819', '192.168.2.15', '成功修改文章：ID32');
+INSERT INTO `cms_logs` VALUES ('31', '2', 'admin', '1385368827', '192.168.2.15', '成功修改文章：ID32');
+INSERT INTO `cms_logs` VALUES ('32', '2', 'admin', '1385368833', '192.168.2.15', '成功修改文章：ID32');
+INSERT INTO `cms_logs` VALUES ('33', '2', 'admin', '1385368848', '192.168.2.15', '成功修改文章：ID32');
+INSERT INTO `cms_logs` VALUES ('34', '2', 'admin', '1385368966', '192.168.2.15', '退出后台！');
+INSERT INTO `cms_logs` VALUES ('35', '1', 'admincms', '1385368974', '192.168.2.15', '成功登录后台！');
+INSERT INTO `cms_logs` VALUES ('36', '1', 'admincms', '1385369119', '192.168.2.15', '菜单管理 添加信息，名称:内容管理，ID:319');
+INSERT INTO `cms_logs` VALUES ('37', '1', 'admincms', '1385369142', '192.168.2.15', '菜单管理 修改了信息，名称:内容管理，ID:319');
+INSERT INTO `cms_logs` VALUES ('38', '1', 'admincms', '1385369150', '192.168.2.15', '编辑了角色 : 管理员  的权限信息，ID：1');
+INSERT INTO `cms_logs` VALUES ('39', '1', 'admincms', '1385369152', '192.168.2.15', '退出后台！');
+INSERT INTO `cms_logs` VALUES ('40', '2', 'admin', '1385369159', '192.168.2.15', '成功登录后台！');
+INSERT INTO `cms_logs` VALUES ('41', '2', 'admin', '1385369176', '192.168.2.15', '编辑器文件上传');
+INSERT INTO `cms_logs` VALUES ('42', '2', 'admin', '1385369178', '192.168.2.15', '成功修改文章：ID32');
+INSERT INTO `cms_logs` VALUES ('43', '2', 'admin', '1385369220', '192.168.2.15', '编辑器文件上传');
+INSERT INTO `cms_logs` VALUES ('44', '2', 'admin', '1385369222', '192.168.2.15', '成功修改文章：ID32');
+INSERT INTO `cms_logs` VALUES ('45', '2', 'admin', '1385369319', '192.168.2.15', '内容管理删除文章：ID32');
+INSERT INTO `cms_logs` VALUES ('46', '2', 'admin', '1385369352', '192.168.2.15', '编辑器文件上传');
+INSERT INTO `cms_logs` VALUES ('47', '2', 'admin', '1385369360', '192.168.2.15', '编辑器文件上传');
+INSERT INTO `cms_logs` VALUES ('48', '2', 'admin', '1385369361', '192.168.2.15', '成功修改文章：ID30');
+INSERT INTO `cms_logs` VALUES ('49', '2', 'admin', '1385369372', '192.168.2.15', '内容管理删除文章：ID30');
 
 -- ----------------------------
 -- Table structure for `cms_node`
@@ -811,7 +844,7 @@ CREATE TABLE `cms_node` (
   KEY `group_id` (`group_id`) USING BTREE,
   KEY `sort` (`sort`) USING BTREE,
   KEY `action` (`action`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=319 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=320 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cms_node
@@ -877,6 +910,7 @@ INSERT INTO `cms_node` VALUES ('315', 'index_data', '首页内容', 'delete', '�
 INSERT INTO `cms_node` VALUES ('316', 'cache', '缓存管理', 'index', '缓存管理', '', '1', '', '0', '2', '1', '0', '0');
 INSERT INTO `cms_node` VALUES ('317', 'setting', '设置', 'edit', '更新设置', '', '1', '', '0', '2', '36', '0', '0');
 INSERT INTO `cms_node` VALUES ('318', 'index_data', '首页内容', '', '', '', '1', '', '0', '0', '38', '0', '0');
+INSERT INTO `cms_node` VALUES ('319', 'article', '内容管理', 'article_upload_img', '编辑器图片上传', '', '1', '', '0', '2', '37', '0', '0');
 
 -- ----------------------------
 -- Table structure for `cms_role`
