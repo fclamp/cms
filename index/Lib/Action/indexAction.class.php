@@ -52,9 +52,10 @@ class indexAction extends baseAction
 		$this->assign('indexInfo1',$list);
 		
 		
-		//新闻活动 、会员展示
 		$list = array();
-		$tpl = $this->index_mode->where('status=1 and catid in(3,5)')->order('sort desc,id desc')->select();
+		
+		//新闻活动
+		$tpl = $this->index_mode->where('status=1 and catid=3')->order('sort desc,id desc')->select();
 		
 		if(!empty($tpl))
 		{
@@ -62,15 +63,12 @@ class indexAction extends baseAction
 			foreach ($tpl as $v)
 			{
 				$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
-				if($v['catid']==3)
-				{
-					$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
-				}
 				
+				$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
+			
 				$list[$v['catid']][] = $v;
 			}
 			
-
 			$top_news = $list[3][0];
 			unset($list[3][0]);
 			$this->assign('top_news',$top_news);
@@ -102,9 +100,26 @@ class indexAction extends baseAction
 			
 			$top_news = $list[3][0];
 			unset($list[3][0]);
-			$this->assign('top_news',$top_news);			
-			
-			//会员展示
+			$this->assign('top_news',$top_news);
+		}
+		
+		
+		
+		//会员展示
+		$tpl = $this->index_mode->where('status=1 and catid=5')->order('sort desc,id desc')->select();
+		if(!empty($tpl))
+		{
+			//从首页内容里获取
+			foreach ($tpl as $v)
+			{
+				$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
+				
+				$list[$v['catid']][] = $v;
+			}
+						
+		}else
+		{			
+			//会员展示(从普通内容)
 			$catid = 10;
 			$category_list = $this->get_cate_comm ( $category_mode,$catid, 0, True);
 			if(!empty($category_list))
