@@ -223,6 +223,7 @@ class index_dataAction extends baseAction
 		$article_id = id( $_REQUEST ['id'] );
 		//主表
 		$article_info = $this->index_mode->where ( 'id=' . $article_id )->find ();
+		
 		if (! isset ( $article_info ['id'] ))
 		{
 			$this->assign ( 'nojump', 'yes' );
@@ -231,7 +232,7 @@ class index_dataAction extends baseAction
 		
 		if (isset ( $_POST ['dosubmit'] ))
 		{
-
+			
 			if (empty($_POST ['title']) or empty($_POST['url']))
 			{
 				$this->error ( '标题、连接不能为空！' );
@@ -249,7 +250,9 @@ class index_dataAction extends baseAction
 				$this->error ( $this->index_mode->error () );
 			}
 			$data['catid'] = id($data['catid']);
-					
+
+			$old_img = '';
+			
 			//上传图片
 			if ($_FILES ['img'] ['name'] != '')
 			{  
@@ -259,6 +262,9 @@ class index_dataAction extends baseAction
 				if (is_array($upload_list) and isset($upload_list['img_url']))
 				{
 					$data ['img'] = $upload_list ['img_url'];
+					
+					$old_img = $article_info['img'];
+					
 				}else
 				{
 					$this->error ( $upload_list );
@@ -287,6 +293,10 @@ class index_dataAction extends baseAction
 			
 			//更新主表
 			$result = $this->index_mode->where ( 'id=' . $article_id )->save ( $data );
+			
+			
+			//删除旧图片
+			$this->delete_old_img($old_img);
 			
 			//日志
 			$this->admin_log ( '成功修改首页内容信息：ID'.$article_id );				
@@ -338,8 +348,23 @@ class index_dataAction extends baseAction
 		$ids_array = $ids;
 		$ids = implode ( ',', $ids );
 		
+		
+		//获取出文章主图片
+		$all_imgs = array ();
+		$tpl = $this->index_mode->field ( '`img`' )->where ( "`id` in($ids)" )->select ();
+		foreach ( $tpl as $img )
+		{
+			$all_imgs [$img ['img']] = $img ['img'];
+		}
+		
 		//删除信息
 		$this->index_mode->where ( "`id` in($ids)" )->delete ();
+		
+		//删除旧图片
+		foreach ($all_imgs as $img)
+		{
+			$this->delete_old_img($img);
+		}
 		
 		
 		//日志
