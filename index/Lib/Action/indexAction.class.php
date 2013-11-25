@@ -38,6 +38,9 @@ class indexAction extends baseAction
 			$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
 			if($v['catid']==1)
 			{
+				$v['title'] = my_sub_char($v['title'],28,'');
+				$v['title2'] = my_sub_char($v['title2'],28,'');
+				$v['abst'] = my_sub_char($v['abst'],500,'');
 				$v['abst'] = str_replace('href','class="c-yellow" href',$v['abst']);
 			}elseif($v['catid']==2)
 			{
@@ -53,7 +56,7 @@ class indexAction extends baseAction
 		$list = array();
 		
 		//新闻活动
-		$tpl = $this->index_mode->where('status=1 and catid=3')->order('sort desc,id desc')->select();
+		$tpl = $this->index_mode->where('status=1 and catid=3')->order('sort desc,id desc')->limit(6)->select();
 		
 		if(!empty($tpl))
 		{

@@ -107,7 +107,7 @@ function add() {
 	window.top.art.dialog({
 		title:lang_add,
 		id:'add',
-		iframe:'?m=index_data&a=add',width:'800',height:'580'
+		iframe:'?m=index_data&a=add',width:'800',height:'480'
 		}, 
 		function()
 		{
@@ -135,7 +135,7 @@ function edit(id, name) {
 		id:'edit',
 		iframe:'?m=index_data&a=edit&id='+id,
 		width:'800',
-		height:'580'}, 
+		height:'480'}, 
 		function(){
 			var d = window.top.art.dialog({id:'edit'}).data.iframe;
 			d.document.getElementById('dosubmit').click();

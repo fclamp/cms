@@ -97,14 +97,38 @@ class baseAction extends Action
 	//检查权限
 	public function check_priv($ajax = FALSE)
 	{
-		if ((! isset ( $_SESSION ['admin_info'] ) || ! $_SESSION ['admin_info']) && ! in_array ( ACTION_NAME, array ('login', 'verify_code' ) ))
+		
+		if(in_array ( ACTION_NAME, array ('login', 'verify_code' ) ))
 		{
+			return True;
+		}
+	
+		if (!isset($_SESSION ['admin_info'] ['id']) or !is_numeric($_SESSION ['admin_info'] ['id']))
+		{
+
+			if (ACTION_NAME == 'index' and MODULE_NAME == 'index')
+			{
+				redirect ( U ( 'public/login' ) );
+			}
 			if ($ajax)
 			{
 				$this->ajaxReturn ( '', '您无权操作此项！', - 1, 'JSON' );
 			}
-			$this->redirect ( 'public/login' );
+			$this->check_accee_error = True;
+			$this->error ( '会话已过期！请刷新页面重新登录！' );
 		}
+		
+		
+		//确定账号是否还存在
+		$D = D('admin');
+		$res = $D->field ( 'id' )->where ( "id={$_SESSION ['admin_info'] ['id']} and `status`=1" )->find ();
+		if(empty($res))
+		{
+			$this->check_accee_error = True;
+			$_SESSION = array();
+			session_destroy();
+			$this->error ( '对不起，你的账号已被封！' );
+		}		
 		
 		//如果是超级管理员，则可以执行所有操作
 		if ($_SESSION ['admin_info'] ['id'] == 1)

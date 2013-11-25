@@ -18,9 +18,9 @@ class index_dataAction extends baseAction
 	private $data_cates = array(
 		'1'=>array('name'=>'幻灯片','imgSize'=>array(680,400),),
 		'2'=>array('name'=>'研究会介绍','imgSize'=>array(350,200)),
-		'3'=>array('name'=>'新闻活动','imgSize'=>array(200,150)),
+		//'3'=>array('name'=>'新闻活动','imgSize'=>array(200,150)),
 		'4'=>array('name'=>'右边栏','imgSize'=>array(350,150)),
-		'5'=>array('name'=>'会员展示','imgSize'=>array(300,250))
+		//'5'=>array('name'=>'会员展示','imgSize'=>array(300,250))
 	
 	);
 	//内容特点
