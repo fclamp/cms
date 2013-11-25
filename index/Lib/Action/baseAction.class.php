@@ -53,10 +53,10 @@ class baseAction extends Action
 					$vs = preg_replace('/\s/','&nbsp;',$vs,-1,$c_n);					
 					if($val['name']=='site_bottominfo' and $n==$k+1)
 					{			
-						$s .= '<p>'.$vs.' 网站构建：<a href="http://team.chengdu.cn">成都全搜索技术团队</a><p>';
+						$s .= '<p>'.$vs.'</p>';//.' 网站构建：<a href="http://team.chengdu.cn">成都全搜索技术团队</a><p>';
 					}else
 					{
-						$s .= '<p>'.$vs.'<p>';
+						$s .= '<p>'.$vs.'</p>';
 					}
 				}
 				$SITEINFO[$val['name']] = $s;
