@@ -56,22 +56,75 @@ class indexAction extends baseAction
 		$list = array();
 		$tpl = $this->index_mode->where('status=1 and catid in(3,5)')->order('sort desc,id desc')->select();
 		
-		foreach ($tpl as $v)
+		if(!empty($tpl))
 		{
-			$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
-			if($v['catid']==3)
+			//从首页内容里获取
+			foreach ($tpl as $v)
 			{
-				$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
+				$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
+				if($v['catid']==3)
+				{
+					$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
+				}
+				
+				$list[$v['catid']][] = $v;
 			}
 			
-			$list[$v['catid']][] = $v;
-		}
-		
-		if(!empty($list[3][0]))
-		{
+
 			$top_news = $list[3][0];
 			unset($list[3][0]);
 			$this->assign('top_news',$top_news);
+						
+		}else
+		{
+			//如果不在首页内容里添加，就从普通内容里获取
+			$category_mode = D ( 'category' );
+			//新闻活动
+			$catid = 15;
+			$category_list = $this->get_cate_comm ( $category_mode,$catid, 0, True);			
+			if(!empty($category_list))
+			{
+				$category_listids = $this->display_tree_ids($category_list);
+				$catid = $category_listids . $catid;
+			}
+			$tpl = $this->article_mode->where("status=1 and catid in($catid)")->order('sort desc,id desc')->limit(6)->select();
+			foreach ($tpl as $v)
+			{
+				$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
+				
+				$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
+				
+				$v['url'] = '/?a=showPage&m=index&id='.$v['id'];
+				
+				//转成首页内容模型
+				$list[3][] = $v;
+			}
+			
+			$top_news = $list[3][0];
+			unset($list[3][0]);
+			$this->assign('top_news',$top_news);			
+			
+			//会员展示
+			$catid = 10;
+			$category_list = $this->get_cate_comm ( $category_mode,$catid, 0, True);
+			if(!empty($category_list))
+			{
+				$category_listids = $this->display_tree_ids($category_list);
+				$catid = $category_listids . $catid;
+			}
+			$tpl = $this->article_mode->where("status=1 and catid in($catid)")->order('sort desc,id desc')->limit(16)->select();
+			foreach ($tpl as $v)
+			{
+				$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
+				
+				$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
+		
+				$v['url'] = '/?a=showPage&m=index&id='.$v['id'];
+				
+				//转成首页内容模型
+				$list[5][] = $v;
+			}
+		
 		}
 		
 		$this->assign('indexInfo2',$list);		
