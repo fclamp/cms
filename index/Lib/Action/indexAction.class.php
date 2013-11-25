@@ -44,8 +44,6 @@ class indexAction extends baseAction
 				$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
 			}
 			
-			
-			
 			$list[$v['catid']][] = $v;
 		}
 		
@@ -71,6 +69,7 @@ class indexAction extends baseAction
 			
 			$top_news = $list[3][0];
 			unset($list[3][0]);
+			
 			$this->assign('top_news',$top_news);
 						
 		}else
@@ -120,6 +119,7 @@ class indexAction extends baseAction
 		}else
 		{			
 			//会员展示(从普通内容)
+			$category_mode = D ( 'category' );
 			$catid = 10;
 			$category_list = $this->get_cate_comm ( $category_mode,$catid, 0, True);
 			if(!empty($category_list))
@@ -128,6 +128,7 @@ class indexAction extends baseAction
 				$catid = $category_listids . $catid;
 			}
 			$tpl = $this->article_mode->where("status=1 and catid in($catid)")->order('sort desc,id desc')->limit(16)->select();
+			
 			foreach ($tpl as $v)
 			{
 				$v['img'] = empty($v['img']) ? $this->default_img : $v['img'];
@@ -143,7 +144,6 @@ class indexAction extends baseAction
 		}
 		
 		$this->assign('indexInfo2',$list);		
-		
 		
 		$this->assign('is_index','yes');
 		
