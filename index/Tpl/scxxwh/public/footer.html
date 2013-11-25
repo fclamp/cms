@@ -35,7 +35,7 @@
 					<div class="hd"><h3>友情链接：</h3></div>
 					<div class="bd">
 					<volist name="ALLLinks['flinks']" id="val" >
-						<a href="{$val['url']}">{$val['name']}</a><if condition="$key neq count($ALLLinks['flinks'])-1">|</if>
+						<a href="{$val['url']}" target="_blank">{$val['name']}</a><if condition="$key neq count($ALLLinks['flinks'])-1">|</if>
 					</volist>
 					</div>
 				</div>
