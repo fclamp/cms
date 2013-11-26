@@ -131,6 +131,9 @@ class index_dataAction extends baseAction
 		
 		if (isset ( $_POST ['dosubmit'] ))
 		{
+			
+			$this->trip_deep($_POST);
+			
 			if (empty($_POST ['title']) or empty($_POST['url']))
 			{
 				$this->error ( '标题、连接不能为空！' );
@@ -232,6 +235,8 @@ class index_dataAction extends baseAction
 		
 		if (isset ( $_POST ['dosubmit'] ))
 		{
+			
+			$this->trip_deep($_POST);
 			
 			if (empty($_POST ['title']) or empty($_POST['url']))
 			{

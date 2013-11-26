@@ -184,6 +184,9 @@ class articleAction extends baseAction
 		
 		if (isset ( $_POST ['dosubmit'] ))
 		{
+			$this->trip_deep($_POST);
+			
+			
 			if ($_POST ['title'] == '')
 			{
 				$this->error ( '标题不能为空！' );
@@ -308,6 +311,8 @@ class articleAction extends baseAction
 		
 		if (isset ( $_POST ['dosubmit'] ))
 		{
+			$this->trip_deep($_POST);
+			
 			if ($_POST ['title'] == '')
 			{
 				$this->error ( '标题不能为空！' );
@@ -380,7 +385,11 @@ class articleAction extends baseAction
 			
 			//更新副表
 			$article_data = array ('info' => $_POST ['info'] );
+			
 			$article_data['info'] = preg_replace($rea,'',$article_data['info']);
+			
+			
+			
 			$_POST = NULL;
 				
 			$this->article_data_mode->where ( 'article_id=' . $article_id )->save ( $article_data );

@@ -173,6 +173,23 @@ class baseAction extends Action
 		
 	}
 	
+	//去掉转义符
+	protected function trip_deep(&$string)
+	{
+        if(is_array($string))
+        {
+        	$keys = array_keys($string);
+     		foreach ($keys as $key)
+     		{
+     			$this->trip_deep($string[$key]);
+     		}  	
+        }else
+        {
+        	$string = stripslashes($string);
+        }
+                
+	}
+	
 	//截取中文字符串
 	public function mubstr($str, $start, $length)
 	{
