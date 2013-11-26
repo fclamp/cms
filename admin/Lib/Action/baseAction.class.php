@@ -98,7 +98,7 @@ class baseAction extends Action
 	public function check_priv($ajax = FALSE)
 	{
 		
-		if(in_array ( ACTION_NAME, array ('login', 'verify_code' ) ))
+		if(in_array ( ACTION_NAME, array ('login','logout','verify_code' ) ))
 		{
 			return True;
 		}
@@ -110,9 +110,10 @@ class baseAction extends Action
 			{
 				redirect ( U ( 'public/login' ) );
 			}
-			if ($ajax)
+			if ($ajax or $this->isAjax())
 			{
-				$this->ajaxReturn ( '', '您无权操作此项！', - 1, 'JSON' );
+				die();
+				//$this->ajaxReturn ( '', '您无权操作此项！', - 1, 'JSON' );
 			}
 			$this->check_accee_error = True;
 			$this->error ( '会话已过期！请刷新页面重新登录！' );
@@ -163,9 +164,10 @@ class baseAction extends Action
 		$rel = $access_mod->where ( array ('node_id' => $node_id, 'role_id' => $_SESSION ['admin_info'] ['role_id'] ) )->count ();
 		if (empty ( $rel ))
 		{
-			if ($ajax)
+			if ($ajax or $this->isAjax())
 			{
-				$this->ajaxReturn ( '', '您无权操作此项！', - 1, 'JSON' );
+				die();
+				//$this->ajaxReturn ( '', '您无权操作此项！', - 1, 'JSON' );
 			}
 			$this->check_accee_error = True;
 			$this->error ( '您无权操作此项！' );
