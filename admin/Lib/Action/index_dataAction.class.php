@@ -136,7 +136,7 @@ class index_dataAction extends baseAction
 			
 			if (empty($_POST ['title']) or empty($_POST['url']))
 			{
-				$this->error ( '标题、连接不能为空！' );
+				$this->error ( '标题、链接不能为空！' );
 			}
 			
 			
@@ -240,7 +240,7 @@ class index_dataAction extends baseAction
 			
 			if (empty($_POST ['title']) or empty($_POST['url']))
 			{
-				$this->error ( '标题、连接不能为空！' );
+				$this->error ( '标题、链接不能为空！' );
 			}
 			
 			
