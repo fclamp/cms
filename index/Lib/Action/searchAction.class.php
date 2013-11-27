@@ -45,7 +45,7 @@ class searchAction extends baseAction
 				{
 					$v ['push_time'] = date ( 'Y-m-d H:i:s', $v ['push_time'] );
 					$v ['title'] = str_replace($_GET['keywords'], '<span class="c-red">'.$_GET['keywords'].'</span>',$v['title']);
-					$v ['url'] = '/?a=showPage&m=index&id=' . $v ['id'];
+					$v ['url'] = $this->show_url . $v ['id'];
 					$v ['abst'] = my_sub_char ( $v ['abst'], 260 );
 					
 					$v ['abst'] = str_replace($_GET['keywords'], '<span class="c-red">'.$_GET['keywords'].'</span>',$v['abst']);
@@ -75,7 +75,7 @@ class searchAction extends baseAction
 			$list = $this->article_mode->query ( $sql );			
 			foreach ($list as $k=>$v)
 			{
-				$v ['url'] = '/?a=showPage&m=index&id=' . $v ['id'];
+				$v ['url'] = $this->show_url . $v ['id'];
 				$list[$k] = $v;
 			}
 			$this->assign ( 'other_list', $list );

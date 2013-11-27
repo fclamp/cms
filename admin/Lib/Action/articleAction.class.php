@@ -37,7 +37,7 @@ class articleAction extends baseAction
 		parent::_initialize ();
 		
 		//文章前台页面
-		$this->view_article_url = '/?a=showPage&m=index&id=%s';
+		$this->view_article_url = '/index/showPage/id/%s';
 		
 		$this->role_id = intval ( $_SESSION ['admin_info'] ['role_id'] );
 		$this->admin_uid = $_SESSION ['admin_info'] ['id'];

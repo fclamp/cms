@@ -16,6 +16,8 @@ class baseAction extends Action
 	
 	public $default_img;	
 	
+	public $list_url = NULL;//列表页URL
+	public $show_url = NULL;//详情URL
 	
 	public function _initialize()
 	{		
@@ -25,6 +27,12 @@ class baseAction extends Action
 		
 		$this->article_mode = D ( 'article' );
 		$this->article_data_mode = D ( 'article_data' );
+		
+		$this->list_url = '/index/lists/cateid/';
+		$this->show_url = '/index/showPage/id/';
+		
+		$this->assign('list_url',$this->list_url);
+		$this->assign('show_url',$this->show_url);
 		
 		
 		//获取导航连接(顶部、底部、友情)

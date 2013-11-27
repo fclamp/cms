@@ -94,7 +94,7 @@ class indexAction extends baseAction
 				
 				$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
 				
-				$v['url'] = '/?a=showPage&m=index&id='.$v['id'];
+				$v['url'] = $this->show_url.$v['id'];
 				
 				//转成首页内容模型
 				$list[3][] = $v;
@@ -138,7 +138,7 @@ class indexAction extends baseAction
 				
 				$v['abst'] = str_replace('href','class="c-blue" href',$v['abst']);
 		
-				$v['url'] = '/?a=showPage&m=index&id='.$v['id'];
+				$v['url'] = $this->show_url.$v['id'];
 				
 				//转成首页内容模型
 				$list[5][] = $v;
@@ -214,7 +214,7 @@ class indexAction extends baseAction
 				{
 					$v['push_time'] = date('Y-m-d H:i:s',$v['push_time']);
 					$v['title'] = htmlspecialchars(my_sub_char($v['title'],69));
-					$v['url'] = '/?a=showPage&m=index&id='.$v['id'];
+					$v['url'] = $this->show_url.$v['id'];
 					$v['abst'] = my_sub_char($v['abst'],260);
 					if(!empty($v['attachment']))
 					{
@@ -386,7 +386,7 @@ class indexAction extends baseAction
 			{
 				if (!empty($title))
 				{
-					$uri .= '&raquo;<a href="/?a=lists&m=index&cateid=' . $res ['id'] . '">' . $res ['name'] . '</a>';
+					$uri .= '&raquo;<a href="'.$this->list_url. $res ['id'] . '">' . $res ['name'] . '</a>';
 					$uri .= '&raquo;<span>' . $title . ' </span>';
 				} else
 				{
@@ -394,14 +394,14 @@ class indexAction extends baseAction
 				}				
 			}else
 			{
-				$uri .= '&raquo;<a href="/?a=lists&m=index&cateid=' . $res ['id'] . '">' . $res ['name'] . '</a>';
+				$uri .= '&raquo;<a href="' .$this->list_url.$res ['id'] . '">' . $res ['name'] . '</a>';
 			}			
 			return $uri;
 		}else
 		{
 			if (!empty($title))
 			{
-				$uri .= '&raquo;<a href="/?a=lists&m=index&cateid=' . $res ['id'] . '">' . $res ['name'] . '</a>';
+				$uri .= '&raquo;<a href="' .$this->list_url.$res ['id'] . '">' . $res ['name'] . '</a>';
 				$uri .= '&raquo;<span>' . $title . ' </span>';
 			} else
 			{

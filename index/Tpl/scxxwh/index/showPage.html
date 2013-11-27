@@ -13,7 +13,7 @@
 						{$info.info}
 					</div>
 					<div class="q-link">
-						<if condition="$more['down']"><em>下一条：<a href="/?a=showPage&m=index&id={$more['down']['id']}">{$more['down']['title']}</a></em></if><if condition="$more['up']"><span>上一条：<a href="/?a=showPage&m=index&id={$more['up']['id']}">{$more['up']['title']}</a></span></if>
+						<if condition="$more['down']"><em>下一条：<a href="{$show_url}{$more['down']['id']}">{$more['down']['title']}</a></em></if><if condition="$more['up']"><span>上一条：<a href="{$show_url}{$more['up']['id']}">{$more['up']['title']}</a></span></if>
 					</div>
 				</div>
 			</div>

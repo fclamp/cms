@@ -17,10 +17,10 @@
 						
 						
 						<li class="<if condition="$_GET['cateid'] eq $val['id'] or $val['id']==$pid">expand<else />shrink</if>">
-							<span><a href="/?a=lists&m=index&cateid={$val.id}">{$val['name']}</a></span>
+							<span><a href="{$list_url}{$val.id}">{$val['name']}</a></span>
 							<dl>
 								<volist name="val['items']" id="va" >
-								<dd <if condition="$_GET['cateid'] eq $va['id']">class="current"</if>><a href="/?a=lists&m=index&cateid={$va.id}">{$va['name']}</a></dd>
+								<dd <if condition="$_GET['cateid'] eq $va['id']">class="current"</if>><a href="{$list_url}{$va.id}">{$va['name']}</a></dd>
 								</volist>
 								
 							</dl>
@@ -28,7 +28,7 @@
 						
 						
 						<else />
-						<li class="<if condition="$_GET['cateid'] eq $val['id']">expand<else />shrink</if>"><span><a href="/?a=lists&m=index&cateid={$val.id}">{$val.name}</a></span></li>
+						<li class="<if condition="$_GET['cateid'] eq $val['id']">expand<else />shrink</if>"><span><a href="{$list_url}{$val.id}">{$val.name}</a></span></li>
 						</if>
 												
 						</volist>
