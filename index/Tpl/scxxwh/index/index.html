@@ -47,10 +47,10 @@
 		<div class="section-layout clearfix">
 			<div id="member" class="box skin-a">
 				<div class="hd"><h3>会员展示</h3></div>
-				<div class="bd scroll-photo">
+				<div id="scroll-wrap" class="bd scroll-photo">
 					<a href="###" class="btn-prev"></a><a href="###" class="btn-next"></a>
 					<div class="scroll-wrap">
-						<ul style="width:2000px;" class="list-photo">
+						<ul id="scroll-list" class="list-photo">
 						<volist name="indexInfo2[5]" id="val" >
 							<li><a href="{$val.url}"><img alt="" width="215" height="160" src="{$val.img}"><span>{$val.title}</span></a></li>
 						</volist>
@@ -66,6 +66,7 @@
 	<script type="text/javascript" src="__ROOT__/statics/scxxwh/js/action.js"></script>
 	<script type="text/javascript">
 		slide_player("slide");
+		u_btn_roll("scroll-list",4000,"scroll-wrap");
 	</script>
 
 
